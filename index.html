@@ -1,161 +1,1260 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa-IR">
+    
 <head>
-	<title>opasco-وب سایت خدمات آنسانسور و پله برقی اوج پیمای آرمان شهر</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>شرکت اوج پیمای آرمان شهر مجری خدمات آسانسور و پله برقی در اصفهان و سایر نقاط کشور - opasco.ir - opasco</title>
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Retrina Group" />
 
-	<!-- Meta Tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="">
-	<meta name="description" content="">
+        <!--  FavIcon  -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
 
-	<!-- Dark mode -->
-	<script>
-		const storedTheme = localStorage.getItem('theme')
- 
-		const getPreferredTheme = () => {
-			if (storedTheme) {
-				return storedTheme
-			}
-			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-		}
+        <!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
 
-		const setTheme = function (theme) {
-			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				document.documentElement.setAttribute('data-bs-theme', 'dark')
-			} else {
-				document.documentElement.setAttribute('data-bs-theme', theme)
-			}
-		}
+        <!-- FontAwesome Css -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <!-- Line icon Css -->
+        <link rel="stylesheet" href="assets/css/LineIcons.css">
+        <!-- Bootstrap Css -->
+        <link rel="stylesheet" href="assets/css/bootstrap.rtl.css">
+        <!-- Owl Carousel Css -->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <!-- Magnific Popup Css -->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!-- Colors Css -->
+        <link rel="stylesheet" href="assets/css/color/orange-color.css" id="option-color">
+        <!--  Custom Style CSS  -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <!--  Rtl Style CSS  -->
+        <link rel="stylesheet" href="assets/css/rtl-main.css">
+        <link rel="stylesheet" href="assets/css-fontello/css/animation.css">
+        <link rel="stylesheet" href="assets/css-fontello/css/fontello-codes.css">
+        <link rel="stylesheet" href="assets/css-fontello/css/fontello-embedded.css">
+        <link rel="stylesheet" href="assets/css-fontello/css/fontello-ie7-codes.css">
+        <link rel="stylesheet" href="assets/css-fontello/css/fontello-ie7.css">
+        <link rel="stylesheet" href="assets/css-fontello/css/fontello.css">
+    </head>
+    <body class="flat-demo dark">
 
-		setTheme(getPreferredTheme())
+    <!--  Pre Loader  -->
+    <div id="overlayer"></div>
+    <span class="loader"></span>
 
-		window.addEventListener('DOMContentLoaded', () => {
-		    var el = document.querySelector('.theme-icon-active');
-			if(el != 'undefined' && el != null) {
-				const showActiveTheme = theme => {
-				const activeThemeIcon = document.querySelector('.theme-icon-active use')
-				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+    <!-- Portfolio Single Modal Start -->
+    <!-- <div class="portfolio-single modal fade" id="portfolio-single" tabindex="-1" role="dialog" aria-labelledby="portfolioModalScrollable" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content text-muted">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="portfolioModalScrollable">کارهای من</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="pt-4 pb-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-10 mx-auto">
+                                    <div class="text-center">
+                                        <h2 class="mb-3">تک صفحه <span class="base-color"> نمونه کار</span></h2>
+                                        <p class="max-width-450">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                                    </div>
+                                    <div class="row contact-info mt-5">
+                                        <div class="col-md-4">
+                                            <div class="text-center">
+                                                <div>
+                                                    <h6>ساخته شده توسط :</h6>
+                                                    <p class="mb-0">مریم امیری</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 p-title-border mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <div>
+                                                    <h6 class="contact_detail-title">تاریخ اتمام پروژه :</h6>
+                                                    <p class="mb-0">21 مهر 1401</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-3 mt-md-0">
+                                            <div class="text-center">
+                                                <div>
+                                                    <h6>مهارت ها:</h6>
+                                                    <p class="mb-0">HTML5 / PHP / CSS3</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5">
+                                        <div class="portfolio-single-item image-border">
+                                            <img src="assets/img/portfolio-15.jpg" class="d-block" alt="...">
+                                        </div>
+                                    </div>
+                                    <div class="text-md-start mt-5">
+                                        <p class="my-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد </p>
+                                        <p class="mt-3 mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--  Portfolio Single Modal End  -->
 
-				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-					element.classList.remove('active')
-				})
+    <!-- Blog Single Modal Start -->
+    <div class="blog-single modal fade" id="hy-1" tabindex="-1" role="dialog" aria-labelledby="blogModalScrollable" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModalScrollable">بلاگ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--   Blog-single   Start -->
+                    <div class="pt-4 pb-5 text-muted">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto blog">
+                                    <div class="rounded">
+                                        <div class="text-md-start">
+                                            <h1 class="mb-4 h4">پله برقی‌های هیوندای: پیشرفت تکنولوژی در حمل و نقل عمومی</h1>
+                                            <div class="entry-meta mb-4">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item">
+                                                        <a class="base-color" href="#"><i class="fa fa-calendar"></i>08 بهمن 1403</a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a class="base-color" href="#" title="Posts by admin" rel="author"><i class="fa fa-user"></i>مهندس حسین علی میرزایی</a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <a class="base-color" href="#" rel="category tag"><i class="fa fa-folder-open"></i>پله برقی</a>
+                                                    </li>
+                                                    <li class="list-inline-item">
+                                                        <!-- <a class="base-color" href="#"><i class="fa fa-comments"></i>بدون نظر.</a> -->
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="entry-image image-border mb-4">
+                                                <img src="assets/img/hy-1.png" alt="">
+                                            </div>
+                                            <div class="entry-content box-border p-3">
+                                                <p>پله برقی‌ها یکی از مهم‌ترین و کارآمدترین ابزارهای حمل و نقل عمومی در مکان‌های مختلف نظیر ایستگاه‌های مترو، مراکز خرید و ساختمان‌های بلند هستند. این دستگاه‌ها به دلیل سهولت استفاده و سرعت بالای جابجایی مسافران، جایگاه ویژه‌ای در زندگی روزمره ما پیدا کرده‌اند. یکی از برندهای معتبر در این زمینه، پله برقی‌های هیوندای هستند که به دلیل کیفیت و دوام بالا شناخته شده‌اند. در این مقاله، ما به بررسی ویژگی‌ها و مزایای پله برقی‌های هیوندای خواهیم پرداخت و همچنین شرکت اوج پیمای آرمان شهر را به عنوان بهترین نصب کننده پله برقی در اصفهان معرفی خواهیم کرد.
+                                                </p>
+                                                <!-- <div class="px-md-5 px-3 py-4 quotation">
+                                                    <i class="base-color lni-quotation size-md"></i>
+                                                    <h6 class="base-color font-italic mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</h6>
+                                                </div> -->
+                                                <ul class="mt-4 checkmark-list mb-0">
+                                                    <!-- Item-01 -->
+                                                    <li class="mb-2">
+                                                        <h4>تاریخچه پله برقی‌های هیوندای</h4>
+                                                        <p>شرکت هیوندای از سال‌های دور به عنوان یکی از پیشگامان صنعت پله برقی در سطح جهانی شناخته می‌شود. این شرکت با بهره‌گیری از تکنولوژی‌های نوین و طراحی‌های مدرن، محصولاتی را ارائه می‌دهد که نه تنها از نظر عملکرد بلکه از نظر زیبایی‌شناسی نیز در سطح بالایی قرار دارند. پله برقی‌های هیوندای به دلیل طراحی ارگونومیک و امنیت بالا، انتخاب مناسبی برای فضاهای عمومی هستند. </p>
+                                                    </li>
+                                                    <!-- Item-02 -->
+                                                    <li class="mb-2">
+                                                        <h4>ویژگی‌های فنی پله برقی‌های هیوندای </h4>
+                                                        <h5>پله برقی‌های هیوندای دارای ویژگی‌های منحصر به فردی هستند که آنها را از سایر برندها متمایز می‌کند. برخی از این ویژگی‌ها شامل:</h5>
+                                                        <ul>
+                                                            <li><p>1. سیستم‌های ایمنی پیشرفته: این پله برقی‌ها با استفاده از سیستم‌های ایمنی پیشرفته، مانع از بروز حوادث ناگوار می‌شوند.</p></li>
+                                                            <li><p>2. مصرف انرژی بهینه: با توجه به تکنولوژی‌های نوین، پله برقی‌های هیوندای دارای مصرف انرژی بهینه‌ای هستند که در کاهش هزینه‌های عملیاتی مؤثر است.</p></li>
+                                                            <li><p>3. طراحی مدرن: این پله برقی‌ها با طراحی‌های جذاب و مدرن، به زیبایی فضاهای عمومی افزوده و تجربه کاربری بهتری را فراهم می‌کنند.</p></li>
+                                                        </ul>
+                                                    </li>
+                                                    <!-- Item-03 -->
+                                                    <li class="mb-3">
+                                                        <h4>نصب و نگهداری پله برقی‌های هیوندای</h4>
+                                                        <p>یکی از مراحل مهم در استفاده از پله برقی‌های هیوندای، نصب و نگهداری صحیح آنهاست. در این زمینه، شرکت اوج پیمای آرمان شهر به عنوان بهترین نصب کننده پله برقی در اصفهان شناخته می‌شود. این شرکت با تیمی مجرب و متخصص، خدمات نصب و نگهداری پله برقی‌های هیوندای را ارائه می‌دهد و توانسته است رضایت مشتریان را جلب کند.</p>
+                                                    </li>
+                                                    <li class="mb-4">
+                                                        <h4>خدمات شرکت اوج پیمای آرمان شهر</h4>
+                                                        <p>شرکت اوج پیمای آرمان شهر با ارائه خدماتی نظیر نصب، تعمیر و نگهداری پله برقی‌های هیوندای، به یکی از معتبرترین نام‌ها در این صنعت تبدیل شده است. این شرکت با بهره‌گیری از تجهیزات مدرن و تکنیک‌های روز دنیا، خدمات خود را ارائه می‌دهد. برخی از خدمات این شرکت شامل:</p>
+                                                        <ul>
+                                                            <li><p>1.نصب حرفه‌ای: به عنوان بهترین نصب کننده پله برقی در اصفهان، اوج پیمای آرمان شهر تمامی مراحل نصب را با دقت و توجه به جزئیات انجام می‌دهد.</p></li>
+                                                            <li><p>2.نگهداری دوره‌ای: این شرکت خدمات نگهداری دوره‌ای را ارائه می‌دهد تا عملکرد بهینه پله برقی‌ها تضمین شود.</p></li>
+                                                            <li><p>3.مشاوره تخصصی: تیم کارشناسی این شرکت، مشاوره‌های تخصصی در زمینه انتخاب و نصب پله برقی‌های هیوندای ارائه می‌دهد.</p></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mb-5">
+                                                        <h4>مزایای استفاده از پله برقی‌های هیوندای</h4>
+                                                        <p>استفاده از پله برقی‌های هیوندای در فضاهای عمومی و تجاری مزایای زیادی دارد. این مزایا شامل:</p>
+                                                        <ul>
+                                                            <li><p>1. افزایش سرعت جابجایی: با استفاده از پله برقی، زمان جابجایی مسافران به طرز چشمگیری کاهش می‌یابد.</p></li>
+                                                            <li><p>2. کاهش خستگی: پله برقی‌ها به افراد کمک می‌کنند تا بدون نیاز به صرف انرژی زیاد، به راحتی از یک طبقه به طبقه دیگر منتقل شوند.</p></li>
+                                                            <li><p>3. افزایش دسترسی: پله برقی‌ها به ویژه برای افرادی که توانایی حرکتی محدودی دارند، دسترسی آسان‌تری به فضاهای مختلف فراهم می‌کنند.</p></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <h5>نتیجه‌گیری</h5>
+                                                <p class="mt-3 mb-0">&emsp;پله برقی‌های هیوندای با ویژگی‌های منحصر به فرد خود، به یکی از بهترین گزینه‌ها برای حمل و نقل عمومی تبدیل شده‌اند. همچنین، شرکت اوج پیمای آرمان شهر به عنوان بهترین نصب کننده پله برقی در اصفهان، خدماتی حرفه‌ای و با کیفیت را در این زمینه ارائه می‌دهد. با توجه به اهمیت نصب صحیح و نگهداری مستمر، انتخاب یک شرکت معتبر مانند اوج پیمای آرمان شهر می‌تواند تأثیر زیادی بر عملکرد و طول عمر پله برقی‌ها داشته باشد.</p>
+                                                <p><br>&emsp;در نهایت، اگر شما به دنبال نصب پله برقی‌های هیوندای در اصفهان هستید، توصیه می‌شود با شرکت اوج پیمای آرمان شهر تماس بگیرید و از خدمات آنها بهره‌مند شوید. این شرکت با تجربه خود در زمینه نصب و نگهداری پله برقی، بهترین گزینه برای شما خواهد بود.</p>
+                                            </div>
+                                            <!-- Comments -->
+                                            <!-- <h2 class="text-start my-4">نظرات</h2>
+                                            <div id="user-comments" class="comments mt-4 box-border">
+                                                <ul class="comment even thread-even depth-1 list-unstyled comments-list m-0" id="comment-1">
+                                                    <li id="div-comment-1" class="p-3">
+                                                        <div class="comment-wrap">
+                                                            <div class="comment-image float-start">
+                                                                <div class="commnet-image-border">
+                                                                    <img alt="/" src="assets/img/client-02.png" class="avatar avatar-65 photo" height="65" width="65">
+                                                                </div>
+                                                            </div>
+                                                            <div class="comment-content">
+                                                                <div class="comment-author">
+                                                                    <span>مریم رستگار</span>
+                                                                    <p class="text-muted comment-date">21 مهر 1401 در 09:13 قبل از ظهر</p>
+                                                                    <a href="#" class="comment-reply-link"><i class="fa fa-reply"></i> پاسخ</a>
+                                                                </div>
+                                                                <div class="comment-text">
+                                                                    <span>سلام، این یک دیدگاه است. برای شروع کار با مدیریت، ویرایش و حذف نظرات، لطفاً از صفحه نظرات در داشبورد ببینید. آواتارهای نظردهنده از Gravatar می آیند.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li id="div-comment-1-2" class="reply-comment p-3">
+                                                        <div class="comment-wrap">
+                                                            <div class="comment-image float-start">
+                                                                <div class="commnet-image-border">
+                                                                    <img alt="/" src="assets/img/client-03.png" class="avatar avatar-65 photo" height="65" width="65">
+                                                                </div>
+                                                            </div>
+                                                            <div class="comment-content">
+                                                                <div class="comment-author">
+                                                                    <span>ماندانا راد</span>
+                                                                    <p class="text-muted comment-date">21 مهر 1401 در 09:13 قبل از ظهر</p>
+                                                                    <a href="#" class="comment-reply-link"><i class="fa fa-reply"></i> پاسخ</a>
+                                                                </div>
+                                                                <div class="comment-text">
+                                                                    <span>سلام، این یک دیدگاه است. برای شروع کار با مدیریت، ویرایش و حذف نظرات، لطفاً از صفحه نظرات در داشبورد ببینید. آواتارهای نظردهنده از Gravatar می آیند.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="comments-devider"></div>
+                                                <ul class="comment even thread-even depth-1 list-unstyled comments-list m-0" id="comment-2">
+                                                    <li id="div-comment-2" class="p-3">
+                                                        <div class="comment-wrap">
+                                                            <div class="comment-image float-start">
+                                                                <div class="commnet-image-border">
+                                                                    <img alt="/" src="assets/img/client-01.png" class="avatar avatar-65 photo" height="65" width="65">
+                                                                </div>
+                                                            </div>
+                                                            <div class="comment-content">
+                                                                <div class="comment-author">
+                                                                    <span>محمد پناهی</span>
+                                                                    <p class="text-muted comment-date">21 مهر 1401 در 09:13 قبل از ظهر</p>
+                                                                    <a href="#" class="comment-reply-link"><i class="fa fa-reply"></i> پاسخ</a>
+                                                                </div>
+                                                                <div class="comment-text">
+                                                                    <span>سلام، این یک دیدگاه است. برای شروع کار با مدیریت، ویرایش و حذف نظرات، لطفاً از صفحه نظرات در داشبورد ببینید. آواتارهای نظردهنده از Gravatar می آیند.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="comments-devider"></div>
+                                                <ul class="comment even thread-even depth-1 list-unstyled comments-list m-0" id="comment-3">
+                                                    <li id="div-comment-3" class="p-3">
+                                                        <div class="comment-wrap">
+                                                            <div class="comment-image float-start">
+                                                                <div class="commnet-image-border">
+                                                                    <img alt="/" src="assets/img/client-03.png" class="avatar avatar-65 photo" height="65" width="65">
+                                                                </div>
+                                                            </div>
+                                                            <div class="comment-content">
+                                                                <div class="comment-author">
+                                                                    <span>ماندانا راد</span>
+                                                                    <p class="text-muted comment-date">21 مهر 1401 در 09:13 قبل از ظهر</p>
+                                                                    <a href="#" class="comment-reply-link"><i class="fa fa-reply"></i> پاسخ</a>
+                                                                </div>
+                                                                <div class="comment-text">
+                                                                    <span>سلام، این یک دیدگاه است. برای شروع کار با مدیریت، ویرایش و حذف نظرات، لطفاً از صفحه نظرات در داشبورد ببینید. آواتارهای نظردهنده از Gravatar می آیند.</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div> -->
+                                            <!--Blog Reply-->
+                                            <!-- <div class="contact mt-4">
+                                                <div class="contact-form">
+                                                    <h2 class="text-start mb-4">ارسال پاسخ</h2>
+                                                    <form>
+                                                        <div class="row">
+                                                            <div class="col-lg-6 form-item">
+                                                                <div class="input-group mb-3">
+                                                                    <input name="name" id="blog-name" type="text" class="form-control" placeholder="نام*" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 form-item">
+                                                                <div class="input-group mb-3">
+                                                                    <input name="email" id="blog-email" type="email" class="form-control" placeholder="ایمیل*" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 form-item">
+                                                                <div class="input-group mb-3">
+                                                                    <textarea name="comments" id="blog-comments" rows="4" class="form-control" placeholder="متن پیام..."></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-12 mt-4 text-start">
+                                                                <div class="button-border">
+                                                                    <button type="submit" class="pill-button" id="blog-submit-btn">ثبت نظر</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  Blog Single Modal End  -->
 
-				btnToActive.classList.add('active')
-				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-			}
+    <!--   Header Start -->
+    <header>
+        <div class="header-navbar h-100">
+            <a class="navbar-brand" href="#"><b>ا</b><span><img src="assets/img/logo-opasco.png" alt="" style="width: 60px; margin-right: 10px"></span>
+            <p style="font-size: 17px; color:#f78f1e ; margin-right: 13px; margin-top: 5px;">opasco</p>
+            </a>
+            <ul class="list-group menu text-center" id="menu">
+                <li class="list-group-item"><a class="active" href="#hero"><i class="fa fa-home"></i><span>خانه</span></a></li>
+                <li class="list-group-item"><a href="#about"><i class="fa fa-user"></i><span>درباره من</span></a></li>
+                <li class="list-group-item"><a href="#resume"><i class="fa fa-address-book"></i><span>رزومه من</span></a></li>
+                <li class="list-group-item"><a href="#portfolio"><i class="fa fa-briefcase"></i><span>نمونه کارها</span></a></li>
+                <li class="list-group-item"><a href="#blog"><i class="fa fa-file-text"></i><span>بلاگ</span></a></li>
+                <li class="list-group-item"><a href="#contact"><i class="fa fa-envelope-open"></i><span>تماس با ما</span></a></li>
+            </ul>
+            <div class="menu-toggler">
+                <span>
+                    <i class="text-white lni-menu"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+    <!--   Header End   -->
 
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-				if (storedTheme !== 'light' || storedTheme !== 'dark') {
-					setTheme(getPreferredTheme())
-				}
-			})
+    <main id="main">
 
-			showActiveTheme(getPreferredTheme())
+        <!--  Hero Start  -->
+        <section id="hero" class="hero-04 active">
+            <div class="display-table">
+                <div class="display-content">
+                    <div class="container">
+                        <div class="row justify-content-center hero-item">
+                            <div class="col-lg-6">
+                                <div class="hero-content">
+                                    <h1 class="mb-3">شرکت اوج پیمای آرمان شهر</h1>
+                                    <h4 class="text-capitalize mb-0"><span class="base-color">با ما</span> <span class="element" data-elements="  بهترین قیمت را,کمترین زمان اجرا پروژه را,بهترین کیفیت را ,نهایت ایمنی و آسودگی را"></span><span class="base-color">تجربه کنید ...</span></h4>
+                                    <p class="max-width-450 mx-0 my-4">شرکت فنی - مهندسی اوج پیمای آرمان شهر با ارائه خدمات مشاوره ، طراحی ،مونتاژ ،نصب و نگهداری انواع آسانسور و پله برقی با کیفیت، به مشتریان خود اطمینان و راحتی را هدیه می دهد . تیم متخصصان ما با استفاده از تکنولوژی های نوین  همواره در تلاش است تا بهترین تجربه را برای شما فراهم می کند.</p>
+                                    <ul class="list-inline hero-social" style="font-size: 30px;">
+                                        <li class="list-inline-item">
+                                            <a href="tel:09902837839">
+                                                <i class="lni-phone-handset" style="font-size: 30px;"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="https://t.me/opasco_ir">
+                                                <i class="icon-telegram" style="font-size: 30px;"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="https://api.whatsapp.com/send?phone=989902837839&amp;text= درود! توی چه خدماتی به من میتونید کمک کنید؟">
+                                                <i class="icon-whatsapp" style="font-size: 30px;"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="https://eitaa.com/opasco_ir">
+                                                <i class="icon-eitaa" style="font-size: 30px;"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                                <a href="https://rubika.ir/opasco_ir">
+                                                    <i class="icon-rubika-2" style="font-size: 30px;"></i>
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero-image">
+                                    <img src="VECTOR-TECHNESION.png" alt="/">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  Hero End  -->
 
-			document.querySelectorAll('[data-bs-theme-value]')
-				.forEach(toggle => {
-					toggle.addEventListener('click', () => {
-						const theme = toggle.getAttribute('data-bs-theme-value')
-						localStorage.setItem('theme', theme)
-						setTheme(theme)
-						showActiveTheme(theme)
-					})
-				})
+        <!--   About Start   -->
+        <section id="about" class="about">
+            <div class="display-table">
+                <div class="display-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center title">
+                                    <h2 class="text-dark"><span class="base-color">درباره</span> ما</h2>
+                                    <p class="text-muted max-width-460 mb-5">ارائه دهنده بهترین خدمات نصب و نگهداری انواع آسانسور و پله برقی</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="image-border">
+                                    <img src="assets/img/home-bg-3.png" alt="/">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-4 mt-lg-0">
+                                <div class="personal-item ">
+                                    <h3 class="text-dark mt-4 mt-lg-0"><span class="base-color">مهندس </span> حسین علی میرزایی</h3>
+                                    <div class="row">
+                                        <div class="col-6 personal-info">
+                                            <ul class="list-unstyled pt-4">
+                                                <li>
+                                                    <p class="base-color">تاریخ تولد : <span> شهریور 1358</span></p>
+                                                </li>
+                                                <li>
+                                                    <!-- <p class="base-color">وب سایت : <span> www.sample.com</span></p> -->
+                                                </li>
+                                                <li>
+                                                    <p class="base-color">تلفن : <span><a href="tel:09902837839" class="text-dark">09902837839 (کلیک کنید)</a></span></p>
+                                                </li>
+                                                <li>
+                                                    <p class="base-color">شهر : <span> اصفهان</span></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6 personal-info">
+                                            <ul class="list-unstyled pt-4">
+                                                <li>
+                                                    <p class="base-color">سن : <span> 45</span></p>
+                                                </li>
+                                                <li>
+                                                    <p class="base-color">مدرک : <span>کارشناسی برق کنترل</span></p>
+                                                </li>
+                                                <li>
+                                                    <p class="base-color">ایمیل : <span><a href="mailto:hosmir40@gmail.com" class="text-dark">hosmir40@gmail.com (کلیک کنید)</a></span></p>
+                                                </li>
+                                                <li>
+                                                    <!-- <p class="base-color">فریلنس : <span> امکان پذیر</span></p> -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="button-border mt-3 mb-lg-0 me-4">
+                                    <a href="javascript:void(0);" class="pill-button">دانلود رزومه</a>
+                                </div> -->
+                                <div class="button-border mt-3 mb-lg-0 to-contact">
+                                    <a href="tel:09902837839" class="pill-button">تماس تلفنی با ما</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Count up Start -->
+                        <div id="count-up" class="count-up text-center box-border">
+                            <div class="row">
+                                <!-- Item-01 -->
+                                <div class="col-6 col-lg-3 my-3 count-item ">
+                                    <div class="count-icon">
+                                        <i class="lni-school-compass base-color"></i>
+                                    </div>
+                                    <div class="my-3">
+                                        <span class="timer count-number" data-from="0" data-to="36" data-speed="5000">0</span>
+                                    </div>
+                                    <p class="mb-0">طراحی های اتاق آسانسور</p>
+                                </div>
+                                <!-- Item-02 -->
+                                <div class="col-6 col-lg-3 my-3 count-item ">
+                                    <div class="count-icon">
+                                        <i class="lni-pencil-alt base-color"></i>
+                                    </div>
+                                    <div class="my-3">
+                                        <span class="timer count-number" data-from="0" data-to="78" data-speed="5000">0</span>
+                                    </div>
+                                    <p class="mb-0">پروژه های تمام شده</p>
+                                </div>
+                                <!-- Item-03 -->
+                                <div class="col-6 col-lg-3 my-3 count-item ">
+                                    <div class="count-icon">
+                                        <i class="lni-network  base-color"></i>
+                                    </div>
+                                    <div class="my-3">
+                                        <span class="timer count-number" data-from="0" data-to="15" data-speed="5000">0</span>
+                                    </div>
+                                    <p class="mb-0">پیمانکاران طرف قرارداد</p>
+                                </div>
+                                <!-- Item-04 -->
+                                <div class="col-6 col-lg-3 my-3 count-item ">
+                                    <div class="count-icon">
+                                        <i class="lni-emoji-smile base-color"></i>
+                                    </div>
+                                    <div class="my-3">
+                                        <span class="timer count-number" data-from="0" data-to="75" data-speed="5000">0</span>
+                                    </div>
+                                    <p class="mb-0">کارفرمایان راضی</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  Count up End  -->
+                        <!--  Service Start  -->
+                        <div class="services">
+                            <div class="row mt-5 ">
+                                <div class="col-12">
+                                    <h3 class="mb-0 text-dark"><span class="base-color">خدمات</span> شرکت اوج پیمای آرمان شهر</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Item 01 -->
+                                <div class="col-lg-4 text-start">
+                                    <div class="services-item box-hover-border">
+                                        <div class="float-start mt-lg-1 d-inline-block services-icon">
+                                            <i class="icon-elevator size-md base-color"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5 class="mb-3">نصب و نگهداری آسانسور </h5>
+                                            <p class="text-muted mb-0">نصب و نگهداری انواع آسانسور اعم از آسانسورهای هیدرولیکی،آسانسورهای کششی، آسانسور وینچی، آسانسور پنوماتیک،آسانسور مغناطیسی، آسانسور هیبریدی، آسانسور پانوراما و room less ، </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 02 -->
+                                <div class="col-lg-4 text-start">
+                                    <div class="services-item box-hover-border">
+                                        <div class="float-start mt-lg-1 d-inline-block services-icon">
+                                            <i class="icon-electiric-ele size-md base-color"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5 class="mb-3"> پله برقی</h5>
+                                            <p class="text-muted mb-0">نصب و راه اندازی انواع پله برقی ساده،پله برقی متقاطع،پله برقی ویلچربر، پله برقی افقی، پله برقی موازی، پله برقی صاف (رمپ متحرک)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 03 -->
+                                <div class="col-lg-4 text-start">
+                                    <div class="services-item box-hover-border">
+                                        <div class="float-start mt-lg-1 d-inline-block services-icon">
+                                            <i class="icon-sunpanel size-md base-color"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5 class="mb-3">پنل های خورشیدی</h5>
+                                            <p class="text-muted mb-0">نصب و راه اندازی انواع پنل های خورشیدی اعم از پنل خورشیدی مونوکریستالی (Monocrystalline Solar Panel)، پنل خورشیدی پلی‌کریستالی (Polycrystalline Solar Panel)، پنل خورشیدی فیلم نازک (Thin-Film Solar Panel)، پنل خورشیدی BIPV (Building-Integrated Photovoltaics)، پنل خورشیدی دوگانه (Bifacial Solar Panel)،پنل خورشیدی با تکنولوژی PERC (PERC Solar Panel)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 04 -->
+                                <div class="col-lg-4 text-start">
+                                    <div class="services-item box-hover-border">
+                                        <div class="float-start mt-lg-1  d-inline-block services-icon">
+                                            <i class="icon-ups size-md base-color"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5 class="mb-3">نصب و اجرای UPS یا برق اضطراری</h5>
+                                            <p class="text-muted mb-0">نصب و اجرای انواع دستگاه های برق اضطراری اعم از UPS آنلاین (Online UPS)، UPS آفلاین (Offline UPS)، UPS نیمه آنلاین (Line-Interactive UPS)، UPS مدولار (Modular UPS)، UPS Sine Wave (Pure Sine Wave UPS)، Modified Sine Wave UPS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 05 -->
+                                <div class="col-lg-4 text-start">
+                                    <div class="services-item box-hover-border">
+                                        <div class="float-start mt-lg-1 d-inline-block services-icon">
+                                            <i class="icon-elecboard size-md base-color mb-0"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5 class="mb-3">تعمیر برد های الکترونیکی آسانسور و پله برقی</h5>
+                                            <p class="text-muted mb-0">تعمیر انواع بردهای الکترونیکی آسانسور و پله برقی اعم از برد کنترل اصلی (Main Control Board)، برد درب (Door Control Board)، برد موتور (Motor Control Board)، برد سنسور (Sensor Board)، برد تغذیه (Power Supply Board)، برد نمایشگر (Display Board)، برد ارتباطی (Communication Board)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 06 -->
+                                <!-- <div class="col-lg-4 text-start">
+                                    <div class="services-item box-hover-border">
+                                        <div class="float-start mt-lg-1 d-inline-block services-icon">
+                                            <i class="lni-cup size-md base-color"></i>
+                                        </div>
+                                        <div class="services-content">
+                                            <h5 class="mb-3">پشتیبانی حرفه ای</h5>
+                                            <p class="text-muted mb-0">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
 
-			}
-		})
-		
-	</script>
+                        </div>
+                        <!--   Service End   -->
+                        <!--   Client Start  -->
+                        <div class="testimonial mt-5">
+                            <div class="col-12">
+                                <h3 class="mb-0 text-dark"><span class="base-color">نظر</span> مشتریان</h3>
+                            </div>
+                            <div class="owl-carousel">
+                                <!-- Testimonial Item-01 -->
+                                <div class="testimonial-item box-border">
+                                    <div class="testimonial-image">
+                                        <div class="testimonial-image-border">
+                                            <img src="assets/img/no face.jpg" alt="/">
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 mt-2 text-muted">"من از خدمات این پیمانکار نصب آسانسور استفاده کردم و واقعاً راضی هستم. تیم بسیار حرفه‌ای و مجرب بودند. نصب آسانسور در زمان مقرر انجام شد و کیفیت کار فوق‌العاده بود. پیشنهاد می‌کنم!"</p>
+                                    <span class="d-block mt-3 fw-bold me-2">محمد علیزاده،<small class="text-muted">نصب آسانسور</small></span>
+                                </div>
+                                <!-- Testimonial Item-02 -->
+                                <div class="testimonial-item box-border">
+                                    <div class="testimonial-image">
+                                        <div class="testimonial-image-border">
+                                            <img src="assets/img/no face.jpg" alt="/">
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 mt-2 text-muted">"تجربه‌ای عالی با این پیمانکار داشتم! آنها به تمامی جزئیات توجه کردند و حتی بعد از اتمام کار، برای هر سوالی پاسخگو بودند. از کارکرد آسانسور هم بسیار راضی هستم، صدای بسیار کمی دارد!"</p>
+                                    <span class="d-block mt-3 fw-bold me-2">حسین طاهری،<small class="text-muted"> نصب آسانسور</small></span>
+                                </div>
+                                <!-- Testimonial Item-03 -->
+                                <div class="testimonial-item box-border">
+                                    <div class="testimonial-image">
+                                        <div class="testimonial-image-border">
+                                            <img src="assets/img/no face.jpg" alt="/">
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 mt-2 text-muted">"این پیمانکار نصب آسانسور یکی از بهترین‌هایی است که تاکنون دیده‌ام. نصب آسانسور من در کمتر از دو هفته انجام شد و کیفیت کارشان بی‌نظیر بود. واقعاً از تعهد و صداقت آنها ممنونم!"</p>
+                                    <span class="d-block mt-3 fw-bold me-2">مهدی شیرجانی، <small class="text-muted">نصب آسانسور</small></span>
+                                </div>
+                                <!-- Testimonial Item-04 -->
+                                <div class="testimonial-item box-border">
+                                    <div class="testimonial-image">
+                                        <div class="testimonial-image-border">
+                                            <img src="assets/img/no face.jpg" alt="/">
+                                        </div>
+                                    </div>
+                                    <p class="mb-0 mt-2 text-muted">"اگر به دنبال یک پیمانکار قابل اعتماد برای نصب پله برقی هستید، اینجا را پیشنهاد می‌کنم! کارشان بسیار منظم و دقیق بود و همه مراحل کار را با دقت انجام دادند. از نتیجه نهایی کاملاً راضی‌ام!"</p>
+                                    <span class="d-block mt-3 fw-bold me-2">حسین فاضلی، <small class="text-muted">نصب پله برقی</small></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--    Client End   -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--    About End    -->
 
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="assets/images/favicon.ico">
+        <!--    Resume Start   -->
+        <section id="resume" class="resume">
+            <div class="display-table">
+                <div class="display-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center title">
+                                    <h2 class="text-dark"><span class="base-color">رزومه</span> مدیر عامل</h2>
+                                    <p class="text-muted max-width-450 mb-5">گوشه ای از تجربیات و تحصیلات مدیرعامل شرکت اوج پیمای آرمان شهر</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--    TimeLine Start   -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h3 class="text-dark">
+                                    <i class="lni-graduation base-color"></i>
+                                    تحصیلات
+                                </h3>
+                                <div class="timeline-items box-border">
+                                    <!--    Item 01   -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon"></div>
+                                        <div class="timeline-contents">
+                                            <div class="time-line-header">
+                                                <h6 class="timeline-title">دیپلم ریاضی و فیزیک</h6>
+                                                <p class="timeline-year">1375 - 1378</p>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>معدل 16.56</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--    Item 02   -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon"></div>
+                                        <div class="timeline-contents">
+                                            <div class="time-line-header">
+                                                <h6 class="timeline-title">کاردانی برق الکترونیک دانشگاه آزاد مجلسی</h6>
+                                                <p class="timeline-year">1385 - 1387</p>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>کسب مدرک کاردانی با معدل 17.23 از دانشگاه فنی و حرفه ای مجلسی، یکی از مطرح ترین دانشگاه های کشور در رشته های فنی و حرفه ای</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--    Item 03   -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon"></div>
+                                        <div class="timeline-contents">
+                                            <div class="time-line-header">
+                                                <h6 class="timeline-title">کارشناسی برق کنترل</h6>
+                                                <p class="timeline-year">1394 - 1396</p>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>کسب مدرک کارشناسی برق کنترل با معدل 18.63 در دانشگاه علمی کاربردی اصفهان</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-5 mt-lg-0">
+                                <h3 class="text-dark">
+                                    <i class="lni-pencil base-color"></i>تجربیات
+                                </h3>
+                                <div class="timeline-items box-border">
+                                    <!--    Item 01   -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon"></div>
+                                        <div class="timeline-contents">
+                                            <div class="time-line-header">
+                                                <h6 class="timeline-title">نصب و نگهداری انواع آسانسور</h6>
+                                                <p class="timeline-year">1382 - هم اکنون</p>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>فراگیری و تدریس خدمات نصب آسانسور در بهترین آموزشگاه های اصفهان با برترین کادر مجرب ، اجرا در پروژه های مختلف و بروز بودن اطلاعات و تخصص همزمان با پیشرفت تکنولوژی</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--    Item 02   -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon"></div>
+                                        <div class="timeline-contents">
+                                            <div class="time-line-header">
+                                                <h6 class="timeline-title">نصب و راه اندازی انواع پله برقی</h6>
+                                                <p class="timeline-year">1389 - هم اکنون</p>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>فراگیری آموزش راه اندازی انواع پله برقی تحت آموزش کادر برند هیوندای و پاراویا تحت استاندارد های اروپا</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--    Item 03   -->
+                                    <div class="timeline-item">
+                                        <div class="timeline-icon"></div>
+                                        <div class="timeline-contents">
+                                            <div class="time-line-header">
+                                                <h6 class="timeline-title">نصب و راه اندازی پنل های خورشیدی و سیستم های UPS(برق اضطراری)</h6>
+                                                <p class="timeline-year">1398 - هم اکنون</p>
+                                            </div>
+                                            <div class="timeline-content">
+                                                <p>آموزش و فراگیری نصب و بهره برداری از سیستم های برق اضطراری و پنل های خورشیدی جهت تامین انرژی با انرژی های سبز تحت لیسانس اروپا در بهترین آموزشگاه های ایران </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--    TimeLine End   -->
+                        <!--  Skill Start  -->
+                        <div class="row mt-5">
+                            <!-- Skill -->
+                            <div class="col-lg-6">
+                                <div>
+                                    <h3 class="mb-0"><span class="base-color">مهارت</span> کار</h3>
+                                </div>
+                                <div id="skills" class="skill-box box-border">
+                                    <div class="skillbar clearfix" data-percent="100%">
+                                        <div class="skillbar-title"><span>انواع آسانسور</span></div>
+                                        <div class="skillbar-bar fill-skillbar"></div>
+                                        <div class="skill-bar-percent">100%</div>
+                                    </div>
+                                    <div class="skillbar clearfix " data-percent="95%">
+                                        <div class="skillbar-title"><span>پله برقی</span></div>
+                                        <div class="skillbar-bar fill-skillbar"></div>
+                                        <div class="skill-bar-percent">95%</div>
+                                    </div>
+                                    <div class="skillbar clearfix" data-percent="90%">
+                                        <div class="skillbar-title"><span>پنل های خورشیدی و تامین برق اضطراری</span></div>
+                                        <div class="skillbar-bar fill-skillbar"></div>
+                                        <div class="skill-bar-percent">90%</div>
+                                    </div>
+                                    <div class="skillbar clearfix" data-percent="85%">
+                                        <div class="skillbar-title"><span>تعمیر بردهای الکترونیکی و درایورها</span></div>
+                                        <div class="skillbar-bar fill-skillbar"></div>
+                                        <div class="skill-bar-percent">85%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div>
+                                    <h3 class="mb-0 mt-5 mt-lg-0"><span class="base-color">مهارت</span> زبان</h3>
+                                </div>
+                                <div class="language-bar box-border">
+                                    <div class="language-skill row">
+                                        <h4 class="col-6 text-start mb-0">انگلیسی <span> تسلط کامل</span></h4>
+                                        <ul class="col-6 list-inline text-end mb-0">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-half-empty"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="language-skill row">
+                                        <h4 class="col-6 text-start mb-0">عربی <span> تسلط نسبی</span></h4>
+                                        <ul class="col-6 list-inline text-end mb-0">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- <div class="language-skill row">
+                                        <h4 class="col-6 text-start mb-0">هندی <span> متوسط</span></h4>
+                                        <ul class="col-6 list-inline text-end mb-0">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="language-skill row">
+                                        <h4 class="col-6 text-start mb-0">آلمانی  <span> متوسط</span></h4>
+                                        <ul class="col-6 list-inline text-end mb-0">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="language-skill row">
+                                        <h4 class="col-6 text-start mb-0">ترکی <span> متوسط</span></h4>
+                                        <ul class="col-6 list-inline text-end mb-0">
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <i class="fa fa-star-o"></i>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!--   Skill End   -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--     Resume End    -->
 
-	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
+        <!-- Portfolio Start -->
+        <section id="portfolio" class="portfolio">
+            <div class="display-table">
+                <div class="display-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center title">
+                                    <h2 class="text-dark"><span class="base-color">کارهای</span> من</h2>
+                                    <p class="text-muted mb-5 max-width-450">برخی از پروژه های موفق شرکت</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--   Portfolio Filters   -->
+                            <ul id="portfolio-filter" class="list-unstyled list-inline mb-0 col-lg-12 text-center portfolio-filter">
+                                <li class="button-border list-inline-item">
+                                    <a href="#" data-filter="*" class="pill-button active">همه</a>
+                                </li>
+                                <li class="button-border list-inline-item">
+                                    <a href="#" data-filter=".elevator" class="pill-button"> نصب آسانسور </a>
+                                </li>
+                                <li class="button-border list-inline-item">
+                                    <a href="#" data-filter=".pelelevator" class="pill-button">نصب پله برقی</a>
+                                </li>
+                                <li class="button-border list-inline-item">
+                                    <a href="#" data-filter=".sunpanel" class="pill-button">نصب پنل خورشیدی</a>
+                                </li>
+                                <li class="button-border list-inline-item">
+                                    <a href="#" data-filter=".ups" class="pill-button">نصب سیستم های برق اضظراری (UPS)</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-items row">
+                            <!-- Item 01 -->
+                            <div class="col-lg-4 portfolio-item elevator">
+                                <div class="image-border">
+                                    <div class="portfolio-item-content">
+                                        <img src="assets/img/elevator-portfolio.png" alt="آسانسور ایرانی شیک در اصفهان با شرکت اوج پیمای آرمان شهر" class="img-fluid">
+                                        <div class="img-overlay text-center">
+                                            <div class="img-overlay-content">
+                                                <div class="portfolio-icon">
+                                                    <!-- <a href="JavaScript:Void();" type="button" data-bs-toggle="modal" data-bs-target="#portfolio-single"><i class="lni-link"></i></a> -->
+                                                    <a href="assets/img/elevator-portfolio.png" class="js-zoom-gallery">
+                                                        <span class="lni-full-screen" style="font-size: 30px; margin-top: 2.5px;"></span>
+                                                    </a>
+                                                </div>
+                                                <h5 class="mt-3 mb-0">کار من</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 01 end -->
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 text-center pt-2">
+                                <div class="button-border d-inline-block me-2 me-sm-4">
+                                    <button class="pill-button showMore" id="showMore">مشاهده بیشتر</button>
+                                    <span id="showMore-initials" class="d-none" class="d-none" data-initial="6" data-next="3"></span>
+                                </div>
+                                <!-- <div class="button-border d-inline-block">
+                                    <a href="portfolio-rtl.html" class="pill-button">صفحه نمونه کارها</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  Portfolio End  -->
 
-	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+        <!--  Blog Start  -->
+        <section id="blog" class="blog">
+            <div class="display-table">
+                <div class="display-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center title">
+                                    <h2 class="text-dark"><span class="base-color">نوشته های</span> اخیر</h2>
+                                    <p class="text-muted mb-5 max-width-450">اینجا مکانی است که می توانید اطلاعات بروزی در حوزه خدمات ما کسب کنید</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!--  Item 01 -->
+                            <div class="col-lg-4">
+                                <div class="blog-item box-border">
+                                    <div class="blog-image">
+                                        <div class="blog-intro">
+                                            <img src="assets/img/hy-1.png" alt="پله برقی هیوندای - پله برقی، هیوندای پاساژ">
+                                        </div>
+                                    </div>
+                                    <div class="blog-content">
+                                        <ul class="list-inline mt-4">
+                                                <li class="list-inline-item">
+                                                    <i class="lni-calendar base-color"></i>
+                                                    <span class="text-muted">21 مهر 1401 </span>
+                                                </li>
+                                                <!-- <li class="list-inline-item">
+                                                    <i class="lni-comment base-color"></i>
+                                                    <span class="text-muted">5</span>
+                                                </li> -->
+                                            </ul>
+                                            <h5 class="mb-3"><a class="text-dark" href="javascript:void(0)" target="_blank" data-bs-toggle="modal" data-bs-target="#hy-1">پله برقی‌های هیوندای: پیشرفت تکنولوژی در حمل و نقل عمومی</a></h5>
+                                        <p>پله برقی‌های هیوندای با ویژگی‌های منحصر به فرد خود، به یکی از بهترین گزینه‌ها برای حمل و نقل عمومی تبدیل شده‌اند. همچنین...</p>
+                                        <div class="blog-link">
+                                            <a class="base-color" href="javascript:void(0)" target="_blank" data-bs-toggle="modal" data-bs-target="#hy-1">ادامه مطلب...</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  Item 01 end -->
+                        </div>
+                        <div class="row mt-4">
+                            <!-- <div class="col-12 text-center pt-2">
+                                <div class="button-border d-inline-block me-2 me-sm-4">
+                                    <button class="pill-button showMore" id="showMore">مشاهده بیشتر</button>
+                                    <span id="showMore-initials" class="d-none" class="d-none" data-initial="6" data-next="3"></span>
+                                </div>
+                                <div class="button-border d-inline-block">
+                                    <a href="portfolio-rtl.html" class="pill-button">صفحه نمونه کارها</a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--   Blog End   -->
 
-</head>
+        <!-- Contact Start -->
+        <section id="contact" class="contact">
+            <div class="display-table">
+                <div class="display-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="text-center title">
+                                    <h2 class="text-dark"><span class="base-color">ارتباط</span> با ما</h2>
+                                    <p class="text-muted mb-5 max-width-450">از هر یک از مسیر های زیر می توانید با شرکت اوج پیمای آرمان شهر ارتباط بگیرید</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row contact-info">
+                            <div class="col-lg-4 mt-5">
+                                <div class="text-center">
+                                    <div class="base-color">
+                                        <i class="lni-phone-handset size-md"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h5 class="text-dark mb-0">تلفن تماس</h5>
+                                        <a href="tel:09132670457"><small class="text-muted">تلفن اول: 09132670457 <br> (کلیک کنید تا تماس برقرار شود!)</small></a>
+                                        <br>
+                                        <i class="base-color">---------------------------------</i>
+                                        <br>
+                                        <a href="tel:09902837839"><small class="text-muted">تلفن دوم: 09902837839 <br> (کلیک کنید تا تماس برقرار شود!)</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-5">
+                                <div class="text-center">
+                                    <div class="base-color">
+                                        <i class="lni-map-marker size-md"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h5 class="text-dark mb-0 contact_detail-title">آدرس دفتر</h5>
+                                        <small class="text-muted">اصفهان، پل تمدن، خیابان معراج، بعد از سه راه میثم، اولین دوربرگردان، ساختمان مروارید، پلاک 680</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-5">
+                                <div class="text-center">
+                                    <div class="base-color">
+                                        <i class="lni-pointer size-md"></i>
+                                    </div>
+                                    <div class="mt-3">
+                                         <h5 class="text-dark mb-0">ایمیل من</h5>
+                                        <a href="mailto:hosmir40@gmail.com"><small class="text-muted">hosmir40@gmail.com <br> (برای ارسال ایمیل کلیک کنید)</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-lg-12 mt-5 contact-form">
+                                <form id="contactForm">
+                                    <div class="row">
+                                        <div class="col-lg-6 form-item">
+                                            <div class="input-group mb-3">
+                                                <input name="name" id="name" type="text" class="form-control" placeholder="نام*" required >
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 form-item">
+                                            <div class="input-group mb-3">
+                                                <input name="email" id="email" type="email" class="form-control" placeholder="ایمیل*" required >
+                                            </div>
+                                        </div>
+                                        <div class="col-12 form-item">
+                                            <div class="input-group mb-3">
+                                                <input name="subject" id="subject" type="text" class="form-control" placeholder="موضوع*" required >
+                                            </div>
+                                        </div>
+                                        <div class="col-12 form-item">
+                                            <div class="input-group mb-3">
+                                                <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="متن پیام..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mt-4 text-start position-relative">
+                                            <div class="button-border">
+                                                <a href="javascript:void(0)" class="pill-button" id="submit-btn" onclick="sendEmail()">ارسال پیام</a>
+                                            </div>
+                                            <div id="message" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000" >
+                                                <div class="toast-body d-inline-block"></div>
+                                                <button type="button" class="btn-close btn-close-white pt-4 pe-3" data-bs-dismiss="toast" aria-label="Close"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+                        <div class="row" >
+                            <ul class="list-inline hero-social text-center" style="margin-top: 50px;">
+                                <h4>ما در شبکه های اجتماعی:</h3>
+                                <li class="list-inline-item">
+                                    <a href="https://t.me/opasco_ir">
+                                        <i class="icon-telegram" style="font-size: 40px;"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://api.whatsapp.com/send?phone=989902837839&amp;text= درود! توی چه خدماتی به من میتونید کمک کنید؟">
+                                        <i class="icon-whatsapp" style="font-size: 40px;"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://eitaa.com/opasco_ir">
+                                        <i class="icon-eitaa" style="font-size: 40px;"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a href="https://rubika.ir/opasco_ir">
+                                            <i class="icon-rubika-2" style="font-size: 40px;"></i>
+                                        </a>
+                                </li>
+                            </ul>
+                            <h4 class="text-center" style="margin-top: 80px;">لوکیشن دفتر در اپلیکیشن نشان</h4>
+                            <iframe style="margin-top: 30px; border-radius: 90px;" title="map-iframe" src="https://neshan.org/maps/iframe/places/_bZtGG0xwv6n#c32.686-51.730-21z-0p/32.68613258627852/51.7299891893868" width="100%" height="450" allowFullScreen loading="lazy" ></iframe>
+                        </div>
+                        
+                        <div class="row copy-right">
+                            <div class="col-12 text-center">
+                                <p>طراحی شده توسط <a href="https://zhavia.ir/"><span class="base-color"> تیم ژاویا | Zhavia</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  Contact End  -->
 
-<body>
+    </main>
 
-<!-- **************** MAIN CONTENT START **************** -->
-<main>
-<section class="pt-0 pt-lg-5 position-relative overflow-hidden my-auto">
+    <!--   Next and Prev Page -->
+    <!-- <div class="next-prev-page">
+        <button type="button" class="prev-page bg-base-color"><i class="fa fa-angle-up text-white"></i></button>
+        <button type="button" class="next-page bg-base-color mt-3"><i class="fa fa-angle-down text-white"></i></button>
+    </div> -->
 
-	<!-- SVG decoration -->
-	<figure class="position-absolute bottom-0 start-0">
-		<svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
-			<path class="fill-warning opacity-5" d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z"></path>
-		</svg>
-	</figure>
-	<!-- SVG decoration -->
-	<figure class="position-absolute top-0 end-0 d-none d-xl-block">
-		<svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">
-			<path class="fill-danger opacity-3" d="M752.5,51.9c-4.5,3.9-8.9,7.8-13.4,11.8c-51.5,45.3-104.8,92.2-171.7,101.4c-39.9,5.5-80.2-3.4-119.2-12.1 c-32.3-7.2-65.6-14.6-98.9-13.9c-66.5,1.3-128.9,35.2-175.7,64.6c-11.9,7.5-23.9,15.3-35.5,22.8c-40.5,26.4-82.5,53.8-128.4,70.7 c-2.1,0.8-4.2,1.5-6.2,2.2L0,301.9c3.3-1.1,6.7-2.3,10.2-3.5c46.1-17,88.1-44.4,128.7-70.9c11.6-7.6,23.6-15.4,35.4-22.8 c46.7-29.3,108.9-63.1,175.1-64.4c33.1-0.6,66.4,6.8,98.6,13.9c39.1,8.7,79.6,17.7,119.7,12.1C634.8,157,688.3,110,740,64.6 c4.5-3.9,9-7.9,13.4-11.8C773.8,35,797,16.4,822.2,1l-0.7-1C796.2,15.4,773,34,752.5,51.9z"></path>
-		</svg>
-	</figure>
+    <!-- Start Options -->
+    <!-- <div id="color-switcher" class="color-switcher" >
+        <div class="text-center color-pallet hide">
+            <h6 class="theme-skin-title">پوسته قالب</h6>
+            <ul class="theme-skin list-inline">
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="flat-skin active">مسطح</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="neo-skin">نئو</a>
+                </li>
+            </ul>
+            <h6 class="text-center mt-3">انتخاب رنگ مورد نظر</h6>
+            <ul class="pattern">
+                <li>
+                    <a class="color1" href="#"></a>
+                </li>
+                <li>
+                    <a class="color2" href="#"></a>
+                </li>
+                <li>
+                    <a class="color3" href="#"></a>
+                </li>
+                <li>
+                    <a class="color4" href="#"></a>
+                </li>
+                <li>
+                    <a class="color5" href="#"></a>
+                </li>
+                <li>
+                    <a class="color6" href="#"></a>
+                </li>
+                <li>
+                    <a class="color7" href="#"></a>
+                </li>
+                <li>
+                    <a class="color8" href="#"></a>
+                </li>
+                <li>
+                    <a class="color9" href="#"></a>
+                </li>
+            </ul>
+            <h6 class="my-2 color-scheme-title">نسخه تیره و روشن</h6>
+            <ul class="color-scheme list-inline">
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="light-scheme active"><i class="lni-sun"></i> روشن</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="javascript:void(0)" class="dark-scheme"><i class="lni-night"></i> تیره</a>
+                </li>
+            </ul>
+        </div>
+        <div class="pallet-button hide">
+            <a href="#" class="cp-toggle"><i class="fa fa-cog fa-spin"></i></a>
+        </div>
+    </div> -->
+    <!-- End Options -->
 
-	<div class="container position-relative">
-		<div class="row g-5 align-items-center justify-content-center">
-			<div class="col-lg-5">
-				<!-- Title -->
-				<h1 class="mt-4 mt-lg-0">ما در حال ساخت یک سایت جدید هستیم!</h1>
-				<!-- info -->
-				 <p>به زودی توسط تیم <span><a href="https://zhavia.ir/">ژاویا | Zhavia</a></span> وب سایت شرکت خدمات آسانسور و پله برقی اوج پیمای آرمان شهر راه اندازی می شود!</p>
-				<!-- Progress bar -->
-				<div class="overflow-hidden mt-4">
-					<p class="mb-1 h6 fw-light text-start">میزان پیشرفت پروژه:</p>
-					<div class="progress progress-md progress-percent-bg bg-light">
-						<div class="progress-bar progress-bar-striped bg-blue aos aos-init aos-animate" data-aos="slide-left" data-aos-delay="200" data-aos-duration="1000" data-aos-easing="ease-in-out" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:48%">
-							<span class="progress-percent text-white">48%</span>
-						</div>					
-					</div>
-				</div>
+    <!--  JavaScripts  -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!--  Bootstrap Js  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!--  Easing Js  -->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <!--  CountTo Js  -->
+    <script src="assets/js/jquery.countTo.js"></script>
+    <!--  Typed Js  -->
+    <script src="assets/js/typed.js"></script>
+    <!--  Magnific Popup Js  -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--  Isotope Js  -->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--  Owl Carousel Js  -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--  Particle Js  -->
+    <script src="assets/js/particles-01.min.js"></script>
+    <!--  particles app Js  -->
+    <script src="assets/js/particles-01.app.js"></script>
+    <!--  Custom JS  -->
+    <script src="assets/js/arshia-rtl.js"></script>
 
-				<!-- Newsletter -->
-				<!-- <form class="mt-4"> -->
-					<!-- Info -->
-					<!-- <h6>هنگام راه اندازی وب سایت به من اطلاع دهید</h6>
-					<div class="bg-body border rounded-2 p-2"> -->
-						<!-- Input subscribe -->
-						<!-- <div class="input-group">
-							<input class="form-control border-0 me-1" type="email" placeholder="ایمیل">
-							<button type="button" class="btn btn-blue mb-0 rounded-2">به من اطلاع بده!</button>
-						</div>
-					</div>
-				</form> -->
-			</div>
+    </body>
 
-			<div class="col-lg-7 text-center">
-				<!-- Image -->
-				<img src="assets/images/element/coming-soon.svg" class="h-300px h-sm-400px h-md-500px h-xl-700px" alt="">
-			</div>
-		</div>
-	</div>
-</section>
-</main>
-<!-- **************** MAIN CONTENT END **************** -->
-
-<!-- Back to top -->
-<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
-
-<!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Vendors -->
-<script src="assets/vendor/aos/aos.js"></script>
-
-<!-- Template Functions -->
-<script src="assets/js/functions.js"></script>
-
-</body>
-
-
-<!-- Mirrored from fixdevelopdemo.ir/theme/eduport/rtl/coming-soon.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 18 Jan 2025 11:12:49 GMT -->
 </html>
